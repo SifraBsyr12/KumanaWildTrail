@@ -1,0 +1,75 @@
+.filters-calendar .rdp-day.day-with-data {
+  position: relative;
+}
+
+.filters-calendar .rdp-day.day-with-data::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.filters-calendar .rdp {
+  --rdp-cell-size: 32px;
+  --rdp-caption-font-size: 14px;
+  --rdp-day-font-size: 14px;
+  margin: 0;
+  padding: 8px;
+}
+
+.filters-calendar .sighting-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  font-size: 10px;
+  background-color: #0d9488; /* safari-teal */
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.filters-calendar .tooltip-content {
+  background-color: #1f2937; /* gray-800 */
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 50;
+}
+.rdp-nav {
+  display: none !important;
+}
+
+
+.filters-calendar .tooltip-arrow {
+  fill: #1f2937; /* gray-800 */
+}
+
+@media (max-width: 640px) {
+  .filters-calendar .rdp {
+    --rdp-cell-size: 28px;
+    --rdp-caption-font-size: 12px;
+    --rdp-day-font-size: 12px;
+  }
+}
+
+.filters-calendar .rdp-day {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  min-height: 32px;
+  visibility: visible !important;
+}
